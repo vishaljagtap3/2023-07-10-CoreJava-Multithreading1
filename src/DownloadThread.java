@@ -8,6 +8,12 @@ public class DownloadThread extends Thread {
 
     @Override
     public void run() {
+
+        Thread dThread = Thread.currentThread();
+        System.out.println("------------------------");
+        System.out.println(dThread.getName() + " " + dThread.getPriority() + " " + dThread.isAlive());
+        System.out.println("------------------------");
+
         for(int i = 0; i <= 100; i++) {
             System.out.println("Downloading " + filePath + " " + i + "%");
             try {
